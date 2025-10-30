@@ -1,24 +1,6 @@
-/* Home.css - Ho.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    url('https://media.istockphoto.com/id/970207346/photo/soldier-special-forces-with-weapons-in-their-hands-on-a-futuristic-background-military-concept.jpg?s=2048x2048&w=is&k=20&c=kakCZ3KV5GU3xJIyvAuoSLWXIb81NgOA8Wb0A561pQA=') center center / cover no-repeat,
-    linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
-  animation: subtleZoom 20s ease-in-out infinite alternate;
-  filter: brightness(0.7);
-}
+/* Home.css - Home Page Styles */
 
-@keyframes subtleZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}home {
+.home {
   width: 100%;
 }
 
@@ -39,7 +21,7 @@
   right: 0;
   bottom: 0;
   background: 
-    url('https://media.istockphoto.com/id/970207346/photo/soldier-special-forces-with-weapons-in-their-hands-on-a-futuristic-background-military-concept.jpg?s=2048x2048&w=is&k=20&c=kakCZ3KV5GU3xJIyvAuoSLWXIb81NgOA8Wb0A561pQA=') center center / cover no-repeat,
+    url('/assets/images/hero-bg.jpg') center center / cover no-repeat,
     linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
   animation: subtleZoom 20s ease-in-out infinite alternate;
 }
@@ -60,9 +42,9 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.7) 100%),
-    linear-gradient(to bottom, rgba(10, 10, 10, 0.5) 0%, rgba(10, 10, 10, 0.85) 100%);
-  backdrop-filter: blur(2px);
+    radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.6) 100%),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.8) 100%);
+  backdrop-filter: blur(1px);
 }
 
 .hero-content {

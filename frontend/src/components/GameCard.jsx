@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 import { FaPlay, FaHeart, FaStar, FaClock } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { favoritesService, authService } from '../utils/localStorage';
-import GameModal from './GameModal';
 import '../styles/GameCard.css';
 
 const GameCard = ({ game, index = 0 }) => {
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setIsFavorite(favoritesService.isFavorite(game.id));
@@ -44,59 +42,18 @@ const GameCard = ({ game, index = 0 }) => {
     window.open(game.trailer, '_blank');
   };
 
-  const handleCardClick = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
-  const handleModalPlay = () => {
-    handlePlay();
-  };
-
-  const handleModalFavorite = () => {
-    if (!authService.isAuthenticated()) {
-      navigate('/login');
-      return;
-    }
-
-    const result = favoritesService.toggleFavorite(game.id);
-    if (result.success) {
-      setIsFavorite(!isFavorite);
-    }
-  };
-
   return (
-    <>
-      <motion.div
-        className="game-card"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        whileHover={{ scale: 1.05, y: -10 }}
-        onClick={handleCardClick}
-        style={{ cursor: 'pointer' }}
-      >
+    <motion.div
+      className="game-card"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ scale: 1.05, y: -10 }}
+    >
       <div className="game-card-image">
-        {game.image && game.image.startsWith('http') ? (
-          <img 
-            src={game.image} 
-            alt={game.title}
-            className="game-image"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'flex';
-            }}
-          />
-        ) : null}
         <div 
           className="game-image-placeholder" 
-          style={{ 
-            background: game.imageColor || 'linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)',
-            display: game.image && game.image.startsWith('http') ? 'none' : 'flex'
-          }}
+          style={{ background: game.imageColor || 'linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)' }}
         >
           <div className="placeholder-content">
             <div className="game-icon">{game.imageIcon || '🎮'}</div>
@@ -155,16 +112,6 @@ const GameCard = ({ game, index = 0 }) => {
         </div>
       </div>
     </motion.div>
-
-      <GameModal
-        game={game}
-        isOpen={showModal}
-        onClose={handleCloseModal}
-        onPlay={handleModalPlay}
-        onFavorite={handleModalFavorite}
-        isFavorite={isFavorite}
-      />
-    </>
   );
 };
 
