@@ -1,0 +1,16 @@
+{
+  "name": "gaming-zone",
+  "version": "1.0.0",
+  "description": "Full-stack cinematic game portal with React and Express",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm start",
+    "dev-backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": ["game", "portal", "react", "express", "halloween"],
+  "author": "WolvesClub Studio",
+  "license": "MIT"
+}

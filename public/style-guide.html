@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Zone - Style Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0a0a;
+            color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ff6b35;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f7b731;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 10px;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .color-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .color-preview {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .color-info {
+            padding: 15px;
+            background: rgba(26, 20, 16, 0.6);
+        }
+
+        .color-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .color-value {
+            font-size: 0.9rem;
+            color: #b8b8b8;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Typography */
+        .font-example {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(26, 20, 16, 0.6);
+            border-radius: 12px;
+        }
+
+        .font-name {
+            color: #f7b731;
+            margin-bottom: 10px;
+        }
+
+        .bebas {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        .anton {
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn-primary {
+            background: #ff6b35;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn-primary:hover {
+            background: #f7b731;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #f4f4f4;
+            color: #f4f4f4;
+        }
+
+        .btn-secondary:hover {
+            background: #f4f4f4;
+            color: #0a0a0a;
+        }
+
+        .btn-danger {
+            background: #dc143c;
+            color: #f4f4f4;
+            box-shadow: 0 0 20px rgba(220, 20, 60, 0.6);
+        }
+
+        /* Shadows */
+        .shadow-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .shadow-card {
+            padding: 30px;
+            background: rgba(26, 20, 16, 0.6);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+        }
+
+        .glow-yellow {
+            box-shadow: 0 0 20px rgba(247, 183, 49, 0.6);
+        }
+
+        .glow-purple {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 20px rgba(220, 20, 60, 0.6);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 GAMING ZONE STYLE GUIDE</h1>
+
+        <!-- Color Palette -->
+        <div class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #0a0a0a;">
+                        🌑
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Background</div>
+                        <div class="color-value">#0a0a0a</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #1a1410;">
+                        🌚
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Secondary Background</div>
+                        <div class="color-value">#1a1410</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #ff6b35;">
+                        🔥
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Neon Orange</div>
+                        <div class="color-value">#ff6b35</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #f7b731;">
+                        ⚡
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Neon Yellow</div>
+                        <div class="color-value">#f7b731</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #a855f7;">
+                        💜
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Shadow Purple</div>
+                        <div class="color-value">#a855f7</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #f4f4f4; color: #0a0a0a;">
+                        👻
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Ghost White</div>
+                        <div class="color-value">#f4f4f4</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #dc143c;">
+                        ❤️
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Blood Red</div>
+                        <div class="color-value">#dc143c</div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-preview" style="background: #b8b8b8; color: #0a0a0a;">
+                        💬
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Text Secondary</div>
+                        <div class="color-value">#b8b8b8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="section">
+            <h2 class="section-title">Typography</h2>
+            
+            <div class="font-example">
+                <div class="font-name">Bebas Neue (Headings)</div>
+                <div class="bebas">GAMING ZONE 2025</div>
+            </div>
+
+            <div class="font-example">
+                <div class="font-name">Anton (Titles)</div>
+                <div class="anton">HALLOWEEN SPECIAL</div>
+            </div>
+
+            <div class="font-example">
+                <div class="font-name">Poppins (Body)</div>
+                <div class="poppins">
+                    Enter the realm of fear. Experience games that will haunt your dreams.
+                    This is a cinematic gaming portal with immersive user experience.
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="section">
+            <h2 class="section-title">Buttons</h2>
+            <div class="button-grid">
+                <div class="btn btn-primary">Primary Button</div>
+                <div class="btn btn-secondary">Secondary Button</div>
+                <div class="btn btn-danger">Danger Button</div>
+            </div>
+        </div>
+
+        <!-- Shadow Effects -->
+        <div class="section">
+            <h2 class="section-title">Glow Effects</h2>
+            <div class="shadow-examples">
+                <div class="shadow-card glow-orange">
+                    <h3>Orange Glow</h3>
+                    <p>Primary accent</p>
+                </div>
+                <div class="shadow-card glow-yellow">
+                    <h3>Yellow Glow</h3>
+                    <p>Secondary accent</p>
+                </div>
+                <div class="shadow-card glow-purple">
+                    <h3>Purple Glow</h3>
+                    <p>Tertiary accent</p>
+                </div>
+                <div class="shadow-card glow-red">
+                    <h3>Red Glow</h3>
+                    <p>Favorites accent</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

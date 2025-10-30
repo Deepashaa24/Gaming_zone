@@ -1,0 +1,175 @@
+/* Dashboard.css - Dashboard Page Styles */
+
+.dashboard {
+  min-height: 100vh;
+  padding: var(--spacing-xl) 0;
+}
+
+.dashboard-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.welcome-banner {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.1),
+    rgba(168, 85, 247, 0.1)
+  );
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  max-width: 1400px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.welcome-banner h1 {
+  font-size: 3rem;
+  color: var(--ghost-white);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.welcome-banner p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Game Section */
+.game-section {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+.game-section .section-header {
+  text-align: left;
+  margin-bottom: var(--spacing-lg);
+}
+
+.game-section .section-title {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--ghost-white);
+}
+
+.game-section .section-title::after {
+  display: none;
+}
+
+.genre-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.game-section .section-subtitle {
+  font-size: 1rem;
+  margin-top: var(--spacing-xs);
+  margin-left: calc(2.5rem + var(--spacing-md));
+}
+
+/* What's Next Section */
+.whats-next {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 183, 49, 0.05),
+    transparent
+  );
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  border: 1px solid rgba(247, 183, 49, 0.2);
+}
+
+.whats-next .section-title {
+  color: var(--neon-yellow);
+}
+
+.whats-next .genre-icon {
+  color: var(--neon-yellow);
+}
+
+/* Loading State */
+.dashboard .loading-container {
+  min-height: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .game-section .section-title {
+    font-size: 2rem;
+  }
+  
+  .genre-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .welcome-banner {
+    padding: var(--spacing-lg);
+  }
+  
+  .welcome-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome-banner p {
+    font-size: 1rem;
+  }
+  
+  .game-section {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .game-section .section-title {
+    font-size: 1.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .game-section .section-subtitle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .welcome-banner {
+    padding: var(--spacing-md);
+  }
+  
+  .welcome-banner h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .game-section .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .genre-icon {
+    font-size: 1.5rem;
+  }
+  
+  .whats-next {
+    padding: var(--spacing-lg);
+  }
+}

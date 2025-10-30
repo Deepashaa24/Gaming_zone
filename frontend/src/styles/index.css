@@ -1,0 +1,200 @@
+/* Global Styles - Cinematic Dark Theme */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Dark Halloween Color Palette */
+  --primary-bg: #0a0a0a;
+  --secondary-bg: #1a1410;
+  --card-bg: rgba(26, 20, 16, 0.8);
+  --overlay-bg: rgba(0, 0, 0, 0.85);
+  
+  /* Neon & Accent Colors */
+  --neon-orange: #ff6b35;
+  --neon-yellow: #f7b731;
+  --ghost-white: #f4f4f4;
+  --blood-red: #dc143c;
+  --shadow-purple: #a855f7;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --text-muted: #6b6b6b;
+  
+  /* Glow Effects */
+  --glow-orange: 0 0 20px rgba(255, 107, 53, 0.6);
+  --glow-yellow: 0 0 20px rgba(247, 183, 49, 0.6);
+  --glow-purple: 0 0 20px rgba(168, 85, 247, 0.6);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Borders */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-orange);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-yellow);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Selection */
+::selection {
+  background: var(--neon-orange);
+  color: var(--primary-bg);
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--spacing-md);
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 107, 53, 0.2);
+  border-top-color: var(--neon-orange);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+  background: rgba(26, 20, 16, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* Neon Glow Text */
+.neon-text {
+  color: var(--neon-orange);
+  text-shadow: var(--glow-orange);
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
